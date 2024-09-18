@@ -10,73 +10,73 @@
 //• en instansmetod setXY som låter dig sätta instansvariablerna x och y
 //• två instansmetoder setWidth och setHeight som låter dig sätta motsvarande
     public class Rectangle {
-        private double x;
-        private double y;
-        private double width;
-        private double height;
+        private int x;
+        private int y;
+        private int width;
+        private int height;
 
         public Rectangle() {
-            this.x = 0.0;
-            this.y = 0.0;
-            this.width = 0.0;
-            this.height = 0.0;
+            this.x = 0;
+            this.y = 0;
+            this.width = 0;
+            this.height = 0;
         }
-        public Rectangle(double width, double height) {
-            this.x = 0.0;
-            this.y = 0.0;
+        public Rectangle(int width, int height) {
+            this.x = 0;
+            this.y = 0;
             this.width = width;
             this.height = height;
         }
 
-        public Rectangle(double x, double y, double width, double height) {
+        public Rectangle(int x, int y, int width, int height) {
             this.x = x;
             this.y = y;
             this.width = width;
             this.height = height;
         }
 
-    public double calculateArea (double width, double height) {
-        double area = width * height;
+    public int calculateArea (int width, int height) {
+        int area = width * height;
         return area;
     }
-     public double calculatePerimeter (double width, double height) {
-         double perimeter = (width + height) * 2;
+     public int calculatePerimeter (int width, int height) {
+         int perimeter = (width + height) * 2;
          return perimeter;
      }
-     public void setXY (double x, double y) {
+     public void setXY (int x, int y) {
           this.y = y;
          this.x = x;
      }
 
-     public double getWidth() {
+     public int getWidth() {
          return width;
      }
 
-     public void setWidth(double width) {
+     public void setWidth(int width) {
          this.width = width;
      }
 
-     public double getY() {
+     public int getY() {
          return y;
      }
 
-     public void setY(double y) {
+     public void setY(int y) {
          this.y = y;
      }
 
-     public void setX(double x) {
+     public void setX(int x) {
          this.x = x;
      }
 
-     public double getHeight() {
+     public int getHeight() {
          return height;
      }
 
-     public void setHeight(double height) {
+     public void setHeight(int height) {
          this.height = height;
      }
 
-     public double getX() {
+     public int getX() {
          return x;
      }
  }

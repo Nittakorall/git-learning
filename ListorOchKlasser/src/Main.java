@@ -21,7 +21,7 @@ public class Main {
         Rectangle r1 = new Rectangle();
         System.out.println(r1.getX());
 
-        Rectangle r2 = new Rectangle(4.0, 6.0, 3.0, 5.0);
+        Rectangle r2 = new Rectangle(4, 6, 3, 5);
         System.out.println(r2.getHeight());
 
         // Använd setY utan att försöka skriva ut resultatet
