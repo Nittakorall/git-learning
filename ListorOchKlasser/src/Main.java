@@ -22,10 +22,8 @@ public class Main {
         System.out.println(r1.getX());
 
         MyRectangle r2 = new MyRectangle(4, 6, 3, 5);
-         //  System.out.println(r2.getHeight());
-        // försökte använda r1.setY eller något annat set men de vägrar funka, fattar inte varför(
-        r2.setHeight(4); // typ så, och sen när jag kör main visar den r2.getHeight() som 5.0 trots att height är int
-        //   System.out.println(r2.getHeight());
+
+        r2.setHeight(4);
         MyRectangle r3 = new MyRectangle(2, 6);
         System.out.println(r3.toString());
         r3.setX(6);
