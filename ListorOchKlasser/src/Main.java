@@ -18,13 +18,17 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("testar");
 
-        Rectangle r1 = new Rectangle();
+        MyRectangle r1 = new MyRectangle();
         System.out.println(r1.getX());
 
-        Rectangle r2 = new Rectangle(4, 6, 3, 5);
-        System.out.println(r2.getHeight());
+        MyRectangle r2 = new MyRectangle(4, 6, 3, 5);
+         //  System.out.println(r2.getHeight());
         // försökte använda r1.setY eller något annat set men de vägrar funka, fattar inte varför(
-        r2.setHeight() // typ så, och sen när jag kör main visar den r2.getHeight() som 5.0 trots att height är int
-
+        r2.setHeight(4); // typ så, och sen när jag kör main visar den r2.getHeight() som 5.0 trots att height är int
+        //   System.out.println(r2.getHeight());
+        MyRectangle r3 = new MyRectangle(2, 6);
+        System.out.println(r3.toString());
+        r3.setX(6);
+        System.out.println(r3.toString());
     }
 }
