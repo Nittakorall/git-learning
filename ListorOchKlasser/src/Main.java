@@ -16,16 +16,15 @@ import java.awt.Rectangle;
 //instansvariabler
 public class Main {
     public static void main(String[] args) {
-        System.out.println("testar intellij");
+        System.out.println("testar");
 
         Rectangle r1 = new Rectangle();
         System.out.println(r1.getX());
 
         Rectangle r2 = new Rectangle(4, 6, 3, 5);
         System.out.println(r2.getHeight());
+        // försökte använda r1.setY eller något annat set men de vägrar funka, fattar inte varför(
+        r2.setHeight() //typ så, och sen när jag kör main visar den r2.getHeight() som 5.0 trots att height är int
 
-        // Använd setY utan att försöka skriva ut resultatet
-        // Kontrollera det nya värdet av y
-        System.out.println(r2.getY());
     }
 }
