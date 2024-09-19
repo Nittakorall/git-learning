@@ -24,7 +24,7 @@ public class Main {
         Rectangle r2 = new Rectangle(4, 6, 3, 5);
         System.out.println(r2.getHeight());
         // försökte använda r1.setY eller något annat set men de vägrar funka, fattar inte varför(
-        r2.setHeight() //typ så, och sen när jag kör main visar den r2.getHeight() som 5.0 trots att height är int
+        r2.setHeight() // typ så, och sen när jag kör main visar den r2.getHeight() som 5.0 trots att height är int
 
     }
 }
