@@ -41,6 +41,7 @@ public class Main {
             System.out.println("6. Quit");
             int a = sc.nextInt();
             sc.nextLine();
+            Boolean somethingFound = false;
             switch (a) {
                 case 1:
                     Book book = new Book();
@@ -64,7 +65,11 @@ public class Main {
 
                         if (bookArrayList.get(i).getName().equals(search)) {
                             System.out.println("I found it!" + bookArrayList.get(i).toString());
+                            somethingFound = true;
                         }
+                    }
+                    if (somethingFound == false) {
+                        System.out.println("We found no book with this title :(");
                     }
                     break;
                 case 3:
@@ -76,21 +81,31 @@ public class Main {
                 case 4:
                     System.out.println("Which book would you like to return?");
                     String returnBook = sc.nextLine();
+                    // Boolean somethingFound = false;
                     for (Book book1 : bookArrayList) {
                         if (book1.getName().equals(returnBook)) {
                             String returnTitle = book1.returnBook(book1);
                             System.out.println(returnTitle);
+                            somethingFound = true;
                         }
+                    }
+                    if (somethingFound == false) {
+                        System.out.println("We found no book with this title :(");
                     }
                     break;
                 case 5:
                     System.out.println("Which book would you like to loan");
                     String returnTitle = sc.nextLine();
+                    //     Boolean somethingFound = false;
                     for (Book book1 : bookArrayList) {
                         if (book1.getName().equals(returnTitle)) {
                             String loanStatus = book1.Loan(book1);
                             System.out.println(loanStatus);
+                            somethingFound = true;
                         }
+                    }
+                    if (somethingFound == false) {
+                        System.out.println("We found no book with this title :(");
                     }
                     break;
                 case 6:
