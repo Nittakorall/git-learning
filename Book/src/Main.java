@@ -31,13 +31,14 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         ArrayList<Book> bookArrayList = new ArrayList<>();
         System.out.println("Greetings! What do you want?");
-       boolean menu = true;
+        boolean menu = true;
         do {
             System.out.println("1. Add a book to the library");
             System.out.println("2. Search for a book by name");
             System.out.println("3. List all available books");
             System.out.println("4. Return a book");
-            System.out.println("5. Quit");
+            System.out.println("5. Loan a book");
+            System.out.println("6. Quit");
             int a = sc.nextInt();
             sc.nextLine();
             switch (a) {
@@ -56,36 +57,49 @@ public class Main {
                     // System.out.println(bookArrayList.toString());
                     break;
                 case 2:
-                    System.out.println("What do you want to find?");// Search for a book by name, doesnt go in i loop
+                    System.out.println("What do you want to find?");
                     String search = sc.nextLine();
-                    System.out.println(bookArrayList.toString());
+
                     for (int i = 0; i < bookArrayList.size(); i++) {
-                        System.out.println("bro");
-                        if (bookArrayList.get(i).getName() == search) {
-                            System.out.println("I found it!" + bookArrayList.get(i).toString()); // funkar inte
-                        } else {
-                            System.out.println("found nothin sir");
+
+                        if (bookArrayList.get(i).getName().equals(search)) {
+                            System.out.println("I found it!" + bookArrayList.get(i).toString());
                         }
                     }
                     break;
                 case 3:
-                    System.out.println(bookArrayList.toString());
+                    System.out.println("Here comes all books we have: ");
+                    for (Book book2 : bookArrayList) {
+                        System.out.println(book2.toString());
+                    }
                     break;
                 case 4:
                     System.out.println("Which book would you like to return?");
                     String returnBook = sc.nextLine();
                     for (Book book1 : bookArrayList) {
-                        if (book1.getName() == returnBook) {
-                            book1.returnBook(book1);
-                            System.out.println("You've returned " + returnBook);
+                        if (book1.getName().equals(returnBook)) {
+                            String returnTitle = book1.returnBook(book1);
+                            System.out.println(returnTitle);
                         }
                     }
                     break;
                 case 5:
+                    System.out.println("Which book would you like to loan");
+                    String returnTitle = sc.nextLine();
+                    for (Book book1 : bookArrayList) {
+                        if (book1.getName().equals(returnTitle)) {
+                            String loanStatus = book1.Loan(book1);
+                            System.out.println(loanStatus);
+                        }
+                    }
+                    break;
+                case 6:
                     System.out.println("Come again!");
                     menu = false;
                     break;
+                default:
+                    System.out.println("Please pick something between 1 and 6");
             }
-        }   while (menu == true);
+        } while (menu == true);
     }
 }

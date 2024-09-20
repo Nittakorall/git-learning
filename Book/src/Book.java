@@ -90,7 +90,7 @@ public class Book {
     public String returnBook(Book book) {
         if (book.avaliability == true) {
 
-            return "Book is already returned";
+            return "Book is already in the library";
         } else if (book.avaliability == false) {
             book.avaliability = true;
             return "Thank you for returning the book";
@@ -103,10 +103,10 @@ public class Book {
     public String toString() {
         if (this.avaliability) {
         return
-                "Title: " +name + "Author: " + author + "Year: " + year + "Loaned: no";}
+                " \n Title: " +name + " \n Author: " + author + " \n Year: " + year + " \n Loaned: no";}
         else {
             return
-                    "Title: " +name + "Author: " + author + "Year: " + year + "Loaned: yes";}
+                    " \n Title: " +name + " \n Author: " + author + " \n Year: " + year + " \n Loaned: yes";}
         }
     }
 
